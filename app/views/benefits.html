@@ -1,0 +1,42 @@
+<div class="section-inside">
+	
+	<div class="benefits-copy">
+		<h2>Keep the benefits you earned. Gain the ones you need.</h2>
+		<p>Here are some Army Reserve benefits you can get by making the switch from Active Duty.<br><br> The Army Reserve has the resources and flexibility to meet your needs. We are here to provide you with the guidance and support to achieve your future goals – civilian and Army.</p>
+
+		<h4>Click an icon to learn more</h4>
+	</div>
+	
+	<div class="benefits-icons">
+		<ul class="clearfix top-row">
+			<li ng-repeat="item in benefitsData | limitTo:5" class="top">
+				<span class="icon" back-img="{{item.iconImg}}" ng-click="showBenefit($index, $event) | track:'{{item.title.replace('<br>', '')}}_benefit_icon'"
+				ng-class="{row1: $index <= 1, row2: $index == 2 || $index == 3, row3: $index == 4}"></span>
+				<span class="title" ng-bind-html="item.title | unsafe">{{item.title}}</span>
+			</li>
+		</ul>
+		<div class="benefits-expanded">
+			<div class="arrow-up"></div>
+			<div class="arrow-down"></div>
+			<p ng-bind-html="benefitCopy | unsafe"></p>
+			<div class="close" ng-click="closeBenefit()">&#215;</div>
+			
+		</div>
+		<ul class="clearfix bottom-row">
+			<li ng-repeat="item in benefitsData" ng-if="$index > 4" class="bottom">
+				<span class="icon" back-img="{{item.iconImg}}" ng-click="showBenefit($index, $event) | track:'{{item.title.replace('<br>', '')}}_benefit_icon'"
+				ng-class="{row4: $index == 5 || $index == 6, row5: $index == 7 || $index == 8, row3: $index == 9}"></span>
+				<span class="title" ng-bind-html="item.title | unsafe">{{item.title}}</span>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="mobile-cta">
+	Ready to Transition?
+	<span>Call or email us for more information</span>
+
+	<div class="links clearfix">
+		<a href="tel:+1-877-780-4264">Call Us</a>
+		<a href="mailto:usarmy.knox.hrc.mbx.cmd-staff-rct-helpdesk@mail.mil">Email Us</a>
+	</div>
+</div>

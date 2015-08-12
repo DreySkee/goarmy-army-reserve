@@ -1,0 +1,48 @@
+<div class="scalable-bg" back-img="{{soldierInfo.bgImg}}" back-img-mobile="{{soldierInfo.mobileBgImg}}"></div>
+
+<div class="section-inside"
+	ng-swipe-left="swipeAction('left')"
+	ng-swipe-right="swipeAction('right')">
+
+	<div  class="mobile-avatar-wrap">
+		<div class="mobile-avatar" back-img="{{soldierInfo.avatarImg}}">
+		</div>
+		<div class="arrow left" ng-click="swipeAction('right')"></div>
+		<div class="arrow right" ng-click="swipeAction('left')"></div>
+	</div>
+	
+
+	<div class="soldier-info">
+		<div class="heading clearfix">
+			<div class="heading-section left">
+				<h2>{{soldierInfo.name}}</h2>
+				<h3>{{soldierInfo.title}}</h2>
+			</div>
+			<div class="heading-section right">
+				<h2>Important to me:</h2>
+				<h3>{{soldierInfo.benefits}}</h2>
+			</div>
+		</div>
+		
+		
+		<div class="table"><p>&ldquo;{{soldierInfo.quote}}&rdquo; </p></div>
+	</div>
+	
+	<ul class="soldier-nav">
+		<li class="circle-faces" 
+		 ng-repeat="item in successData"
+		 ng-click="showSoldier($index, $event) | track:'{{item.name}}_testimonial'"
+		 ng-class="{active: $first}"><img ng-src="{{item.avatarImg}}"></li>
+	</ul>
+</div>
+
+<div class="mobile-cta">
+	Ready to Transition?
+	<span>Call or email us for more information</span>
+
+	<div class="links clearfix">
+		<a href="tel:+1-877-780-4264">Call Us</a>
+		<a href="mailto:usarmy.knox.hrc.mbx.cmd-staff-rct-helpdesk@mail.mil">Email Us</a>
+	</div>
+</div>
+

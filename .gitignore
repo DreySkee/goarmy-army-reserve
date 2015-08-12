@@ -1,0 +1,5 @@
+node_modules/**/*
+app/scripts/all.js
+app/scripts/all.min.js
+npm-debug.log
+app/styles/ac2rc.css

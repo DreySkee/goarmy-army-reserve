@@ -1,0 +1,24 @@
+
+
+body {}
+#page_content,#parentsBody {background-color:#ffffff;}
+#marqueeWrapper div#page_content {background:none;}
+#left_nav {background-color:#ffffff;}
+
+
+/*  Footer Styles  */
+
+ul.tabLinks li a,ul.tabLinks li a:visited {
+    color:;
+}
+ul.tabLinks li a:hover {
+    color:;
+}
+ul.tabLinks li {
+    background-color:;
+}
+div.tabs div.tabContent{width:100%;}
+.ui-tabs-nav li.ui-tabs-selected,div.tabs div.tabContent {
+    border-bottom-color:;
+    background-color:;
+}

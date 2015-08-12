@@ -1,0 +1,428 @@
+.errors {
+	 display:none;
+}
+
+.form-error {
+	color: red;
+}
+::-webkit-input-placeholder {
+   color: #444469;
+}
+
+:-moz-placeholder {
+   color: #444469;  
+}
+
+::-moz-placeholder { 
+   color: #444469;  
+}
+
+:-ms-input-placeholder {  
+   color: #444469;  
+}
+
+#locations {
+	
+	position: relative;
+	height: 500px;
+	background: #fff;
+
+	@media (max-width: @screen-sm) {
+		height: auto;
+	}
+
+	.section-inside {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+	}
+
+	h2 {
+		display: none;
+	}
+
+	.map-wrapper {
+		position: relative;
+
+		@media (max-width: @screen-sm) {
+			//padding-bottom:27px;
+		}
+		map {
+			height: 500px;
+		}
+		.gm-style-iw {
+			left: 25px !important;
+		}
+		.map-info-box {
+			padding: 16px 0px;
+			text-align: center;
+
+			h3 {
+				.font;
+				font-size: 18px;
+				padding-bottom: 10px;
+				line-height: 20px;
+				color: black;
+			}
+
+			p {
+				.font;
+				font-size: 12px; 
+			}
+
+			a {
+				.font-bold;
+				display: block;
+				font-weight: 800;
+				letter-spacing: 0pt;
+				word-spacing: 0pt;
+				font-size: 13px;
+				border: none;
+			   	padding: 0;
+			   	color: #000034; 
+			   	text-transform: uppercase;
+			   	height: 30px;
+			   	width: 110px;
+			   	line-height: 28px;
+			   	text-align: center;
+			   	font-style: normal;
+			   	border: 2px solid #ffd530;
+			   	margin: 10px auto 0 auto;	
+			   	text-decoration: none;
+			}
+		}
+
+
+		// Hiding google map labels
+		//a[href^="http://maps.google.com/maps"]{display:none !important}
+
+		//.gmnoprint a, .gmnoprint span, .gmnoprint .gm-style-mtc {
+		//    display:none;
+		//}
+		//.gmnoprint div {
+		//    background:none !important;
+		//}
+
+	}
+
+	.search-window {
+
+		position: absolute;
+		top: 14%;
+		left: 14%;
+		z-index: 3;
+		background: #fff;
+		color: #000034;
+		width: 210px;
+		padding: 35px 40px;
+
+		@media (max-width: @screen-md) {
+			left: 10%; 
+		}
+
+		-webkit-box-shadow: 11px 10px 5px -7px rgba(0,0,0,0.15);
+		-moz-box-shadow: 11px 10px 5px -7px rgba(0,0,0,0.15);
+		box-shadow: 11px 10px 5px -7px rgba(0,0,0,0.15);
+
+		@media (max-width: @screen-sm) {
+			width: 90%;
+			padding: 20px;
+			left: 5%;
+			bottom: auto;
+			top: 30px;
+			box-sizing: border-box;
+		}
+
+		.career-search-box {
+
+			.font;
+					
+			h3 {
+				.font-bold;
+				font-size: 23px;
+				margin-bottom: 15px;
+				line-height: 120%;
+
+				@media (max-width: @screen-sm) {
+					font-size: 15px;
+				}
+			}
+
+			p {
+				margin-bottom: 15px;
+				letter-spacing: 0;
+				font-size: 12px;
+			}
+
+			.form-group {
+				min-height: 40px;
+				margin-bottom: 20px;
+			}
+
+			select {
+				width: 100%;
+				height: 30px;
+			}
+
+			input {
+				.font-italic;
+				padding: 10px;
+				color:  #000034; 
+				text-transform: uppercase;
+				box-sizing: border-box;
+				width: 100%;
+				border: none;
+				background: #ebebeb;
+
+				&[type=text] {
+					height: 40px;
+				}
+
+				&.text-button {
+					.font-bold;
+					font-weight: 800;
+					letter-spacing: 0pt;
+					word-spacing: 0pt;
+					line-height: 0;
+					font-size: 13px;
+					border: none;
+				   	background-color: transparent;
+				   	padding: 0;
+				   	color: #000034; 
+				   	text-transform: uppercase;
+				   	height: 30px;
+				   	width: 140px;
+				   	line-height: 28px;
+				   	text-align: center;
+				   	font-style: normal;
+				   	border: 2px solid #ffd530;
+				   	cursor: pointer;
+				   	margin-top: 5px;
+				}
+			}
+
+			.form-error {
+				margin-top: 5px;
+			}
+		}
+	}
+
+	.search-message {
+		position: fixed;
+		top: 80px;
+		width: 100px;
+		height: 55px;
+		opacity: 1;
+		background: #fff;
+		left: -110px;
+		opacity: 0;
+		cursor: pointer;
+
+		-webkit-box-shadow: 11px 10px 5px -7px rgba(0,0,0,0.15);
+		-moz-box-shadow: 11px 10px 5px -7px rgba(0,0,0,0.15);
+		box-shadow: 11px 10px 5px -7px rgba(0,0,0,0.15);
+
+		img {
+			position: absolute;
+			left: 0;
+			top: 8px;
+		}
+
+		span {
+			.font-bold;
+			float: right; 
+			font-size: 12px; 
+			text-transform: uppercase;
+			text-align: center;
+			color: #58595b;
+			width: 60px;
+			font-weight: 800;
+			padding: 14px 8px 0;
+		}
+	}
+
+		/* SELECT BOX
+	==================================================================================*/
+
+	 .jquery-selectbox {
+	    background: none repeat scroll 0 0 #ebebeb;
+	    border: none;
+	    border-radius: 0;
+	    color: #424242;
+	    float: left;
+	    font-size: 11px;
+	    font-weight: bold;
+	    height: 40px;
+	    padding: 10px;
+	    margin: 0;
+	    position: relative;
+	    width: 100% !important;
+	    z-index: 5;
+	    box-sizing: border-box;
+	}
+	    
+	 .jquery-selectbox .jquery-selectbox-moreButton, .featured-videos .jquery-selectbox .jquery-selectbox-moreButton {
+	    background: url("/images/locations/arrow-down.png") no-repeat scroll 0 12px;
+	    position:absolute;
+	    right: 0;
+	    top:0;
+	    height: 40px;
+	    width: 40px;
+	    border-left: none;
+	    cursor: pointer;
+	}
+	 .jquery-selectbox.selecthover, .featured-videos .jquery-selectbox.selecthover{
+	    background: #ddd;
+	    z-index: 4;
+	}
+	 .jquery-selectbox .jquery-selectbox-moreButton.morebuttonhover, .featured-videos .jquery-selectbox .jquery-selectbox-moreButton.morebuttonhover{
+	    background: url("/images/locations/arrow-down.png") no-repeat scroll 0 12px !important;
+	    z-index: 4;
+	}  
+	 .jquery-selectbox .jquery-selectbox-currentItem, .featured-videos .jquery-selectbox .jquery-selectbox-currentItem{
+
+	 	.font-italic;
+		padding: 10px;
+		color:  #000034; 
+		text-transform: uppercase;
+
+
+	 	position: relative;
+	 	bottom: -3px;
+	    white-space: nowrap;
+	    display: block;
+	    overflow: visible;
+	    padding: 0;
+		font-weight: 400;
+	}
+	 .jquery-selectbox .jquery-selectbox-list, .featured-videos .jquery-selectbox .jquery-selectbox-list{
+	    background: #ebebeb;
+	    display: none;
+	    border: none;
+	    width: 135% !important;
+	    position: absolute;
+	    top: 40px;
+	    left: 0px;
+	    border-radius: 0;
+	    border-top:none;
+	    max-height: 300px;;
+	    overflow-x: hidden;
+	    overflow-y: auto;
+	    z-index:6;
+	    color:#424242;
+
+	    @media (max-width: @screen-sm) {
+	    	width: 115% !important;
+	    	max-height: 300px;
+	    }
+	}
+	 .jquery-selectbox .jquery-selectbox-item, .featured-videos .jquery-selectbox .jquery-selectbox-item {
+	 	.font;
+	 	font-size: 10px;
+	 	color: #000034;
+	    height:24px;
+	    padding: 8px 0 8px 6px;
+	    display: block;
+	    cursor: pointer;
+	    font-weight: 400;
+	    line-height: 25px;
+		border-bottom: 1px solid #ccc;
+
+	    @media (max-width: @screen-sm) {
+	    	font-size: 12px;
+	    }
+	}
+	 .jquery-selectbox .jquery-selectbox-item.listelementhover, .featured-videos .jquery-selectbox .jquery-selectbox-item.listelementhover{
+	    background: #ddd;
+	    width:100%;
+	    height:24px;
+	    padding: 8px 0 8px 6px;
+	    color: #000034;
+	}
+
+	 form input.text {
+	    border-radius: 0;
+	    height: 16px;
+	    width: 150px;
+	    border: none;
+	    padding: 5px;
+	    color:#48483c;
+	}
+
+	.jquery-selectbox  .jquery-selectbox-currentItem {
+		width: 158px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.mobile-cta {
+		bottom: 0;
+		left: 0;
+	}
+	
+	select.ac2rc-select {
+		opacity: 0;
+		top: 10px;
+
+		@media (min-width: @screen-sm) {
+			opacity: 1;
+	    }	
+	}
+	.dummie-dd {
+		display: none;
+		top: -23px;
+	    background: none repeat scroll 0 0 #ebebeb;
+	    border: none;
+	    border-radius: 0;
+	    color: #424242;
+	    float: left;
+	    font-size: 11px;
+	    font-weight: bold;
+	    height: 40px;
+	    padding: 10px;
+	    margin: 0;
+	    position: relative;
+	    width: 100% !important;
+	    z-index: 5;
+	    box-sizing: border-box;
+	    pointer-events: none;
+
+	    @media (max-width: @screen-sm) {
+			display: block;
+	    }
+
+	    div {
+	    	background: url("/images/locations/arrow-down.png") no-repeat scroll 0 12px;
+		    position:absolute;
+		    right: 0;
+		    top:0;
+		    height: 40px;
+		    width: 40px;
+		    border-left: none;
+		    cursor: pointer;	
+	    }
+
+	    span {
+	    	.font-italic;
+	    	width: 158px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			padding: 10px;
+			color:  #000034; 
+			text-transform: uppercase;
+
+
+		 	position: relative;
+		 	bottom: -3px;
+		    white-space: nowrap;
+		    display: block;
+		    overflow: visible;
+		    padding: 0;
+			font-weight: 400;
+	    }
+	}
+	   
+}
+

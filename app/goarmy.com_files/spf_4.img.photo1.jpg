@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head>
+<title>500 (x + width) is outside raster</title>
+</head>
+<body>
+<h1>(x + width) is outside raster (500)</h1>
+<p>The requested URL /content/spflibrary/channel/_jcr_content/spfpar/spf_4.img.photo1.jpg resulted in an error in /apps/goarmy/components/spf/img.jpg.java.</p>
+<h3>Exception:</h3>
+<pre>
+java.awt.image.RasterFormatException: (x + width) is outside raster
+	at sun.awt.image.IntegerInterleavedRaster.createWritableChild(IntegerInterleavedRaster.java:463)
+	at java.awt.image.BufferedImage.getSubimage(BufferedImage.java:1166)
+	at com.day.image.Layer.crop(Layer.java:1324)
+	at com.day.cq.commons.ImageResource.crop(ImageResource.java:462)
+	at apps.goarmy.components.spf.img_jpg.writeLayer(img.jpg.java:87)
+	at com.day.cq.wcm.commons.AbstractImageServlet.doGet(AbstractImageServlet.java:68)
+	at org.apache.sling.api.servlets.SlingSafeMethodsServlet.mayService(SlingSafeMethodsServlet.java:262)
+	at org.apache.sling.api.servlets.SlingSafeMethodsServlet.service(SlingSafeMethodsServlet.java:338)
+	at org.apache.sling.api.servlets.SlingSafeMethodsServlet.service(SlingSafeMethodsServlet.java:369)
+	at org.apache.sling.scripting.java.ServletWrapper.service(ServletWrapper.java:244)
+	at org.apache.sling.scripting.java.ServletWrapper.service(ServletWrapper.java:146)
+	at org.apache.sling.scripting.java.JavaScriptEngineFactory.callServlet(JavaScriptEngineFactory.java:182)
+	at org.apache.sling.scripting.java.JavaScriptEngineFactory.access$000(JavaScriptEngineFactory.java:61)
+	at org.apache.sling.scripting.java.JavaScriptEngineFactory$JavaScriptEngine.eval(JavaScriptEngineFactory.java:264)
+	at org.apache.sling.scripting.core.impl.DefaultSlingScript.call(DefaultSlingScript.java:224)
+	at org.apache.sling.scripting.core.impl.DefaultSlingScript.eval(DefaultSlingScript.java:161)
+	at org.apache.sling.scripting.core.impl.DefaultSlingScript.service(DefaultSlingScript.java:320)
+	at org.apache.sling.engine.impl.request.RequestData.service(RequestData.java:525)
+	at org.apache.sling.engine.impl.filter.SlingComponentFilterChain.render(SlingComponentFilterChain.java:45)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:64)
+	at com.day.cq.wcm.core.impl.WCMDebugFilter.doFilterWithErrorHandling(WCMDebugFilter.java:183)
+	at com.day.cq.wcm.core.impl.WCMDebugFilter.doFilter(WCMDebugFilter.java:150)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:60)
+	at com.day.cq.wcm.core.impl.WCMRequestFilter.filterRootInclude(WCMRequestFilter.java:328)
+	at com.day.cq.wcm.core.impl.WCMRequestFilter.doFilter(WCMRequestFilter.java:161)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:60)
+	at org.apache.sling.engine.impl.SlingMainServlet.processRequest(SlingMainServlet.java:427)
+	at org.apache.sling.engine.impl.filter.RequestSlingFilterChain.render(RequestSlingFilterChain.java:48)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:64)
+	at org.apache.sling.engine.impl.debug.RequestProgressTrackerLogFilter.doFilter(RequestProgressTrackerLogFilter.java:59)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:60)
+	at com.day.cq.collab.wiki.impl.WikiMailServiceImpl.doFilter(WikiMailServiceImpl.java:552)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:60)
+	at com.day.cq.collab.wiki.impl.WikiServiceImpl.doFilter(WikiServiceImpl.java:440)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:60)
+	at com.day.cq.wcm.foundation.forms.impl.FormsHandlingServlet.doFilter(FormsHandlingServlet.java:193)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:60)
+	at com.day.cq.theme.impl.ThemeResolverFilter.doFilter(ThemeResolverFilter.java:67)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:60)
+	at org.apache.sling.i18n.impl.I18NFilter.doFilter(I18NFilter.java:96)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:60)
+	at org.apache.sling.rewriter.impl.RewriterFilter.doFilter(RewriterFilter.java:75)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:60)
+	at org.apache.sling.portal.container.internal.request.PortalFilter.doFilter(PortalFilter.java:76)
+	at org.apache.sling.engine.impl.filter.AbstractSlingFilterChain.doFilter(AbstractSlingFilterChain.java:60)
+	at org.apache.sling.engine.impl.SlingMainServlet.service(SlingMainServlet.java:308)
+	at org.apache.sling.engine.impl.SlingMainServlet.service(SlingMainServlet.java:189)
+	at org.apache.felix.http.base.internal.handler.ServletHandler.doHandle(ServletHandler.java:93)
+	at org.apache.felix.http.base.internal.handler.ServletHandler.handle(ServletHandler.java:79)
+	at org.apache.felix.http.base.internal.dispatch.ServletPipeline.handle(ServletPipeline.java:42)
+	at org.apache.felix.http.base.internal.dispatch.InvocationFilterChain.doFilter(InvocationFilterChain.java:49)
+	at org.apache.felix.http.base.internal.dispatch.HttpFilterChain.doFilter(HttpFilterChain.java:33)
+	at org.apache.felix.http.base.internal.dispatch.FilterPipeline.dispatch(FilterPipeline.java:48)
+	at org.apache.felix.http.base.internal.dispatch.Dispatcher.dispatch(Dispatcher.java:39)
+	at org.apache.felix.http.base.internal.DispatcherServlet.service(DispatcherServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.felix.http.proxy.ProxyServlet.service(ProxyServlet.java:60)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:802)
+	at org.apache.sling.launchpad.base.webapp.SlingServletDelegate.service(SlingServletDelegate.java:275)
+	at org.apache.sling.launchpad.webapp.SlingServlet.service(SlingServlet.java:130)
+	at com.day.j2ee.servletengine.ServletRuntimeEnvironment.service(ServletRuntimeEnvironment.java:228)
+	at com.day.j2ee.servletengine.RequestDispatcherImpl.doFilter(RequestDispatcherImpl.java:315)
+	at com.day.j2ee.servletengine.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at com.day.crx.launchpad.filters.CRXLaunchpadLicenseFilter.doFilter(CRXLaunchpadLicenseFilter.java:96)
+	at com.day.j2ee.servletengine.FilterChainImpl.doFilter(FilterChainImpl.java:72)
+	at com.day.j2ee.servletengine.RequestDispatcherImpl.service(RequestDispatcherImpl.java:334)
+	at com.day.j2ee.servletengine.RequestDispatcherImpl.service(RequestDispatcherImpl.java:378)
+	at com.day.j2ee.servletengine.ServletHandlerImpl.execute(ServletHandlerImpl.java:313)
+	at com.day.j2ee.servletengine.DefaultThreadPool$DequeueThread.run(DefaultThreadPool.java:134)
+	at java.lang.Thread.run(Thread.java:680)
+</pre>
+<h3>Request Progress:</h3>
+<pre>
+      0 (2013-06-25 13:21:42) TIMER_START{Request Processing}
+      0 (2013-06-25 13:21:42) COMMENT timer_end format is {&lt;elapsed msec&gt;,&lt;timer name&gt;} &lt;optional message&gt;
+      0 (2013-06-25 13:21:42) LOG Method=GET, PathInfo=/content/spflibrary/channel/_jcr_content/spfpar/spf_4.img.photo1.jpg
+      0 (2013-06-25 13:21:42) TIMER_START{ResourceResolution}
+      6 (2013-06-25 13:21:42) TIMER_END{6,ResourceResolution} URI=/content/spflibrary/channel/_jcr_content/spfpar/spf_4.img.photo1.jpg resolves to Resource=JcrNodeResource, type=goarmy/components/spf, superType=goarmy/components/globalcomponent, path=/content/spflibrary/channel/jcr:content/spfpar/spf_4
+      6 (2013-06-25 13:21:42) LOG Resource Path Info: SlingRequestPathInfo: path='/content/spflibrary/channel/jcr:content/spfpar/spf_4', selectorString='img.photo1', extension='jpg', suffix='null'
+      6 (2013-06-25 13:21:42) TIMER_START{ServletResolution}
+      6 (2013-06-25 13:21:42) TIMER_START{resolveServlet(JcrNodeResource, type=goarmy/components/spf, superType=goarmy/components/globalcomponent, path=/content/spflibrary/channel/jcr:content/spfpar/spf_4)}
+      6 (2013-06-25 13:21:42) TIMER_END{0,resolveServlet(JcrNodeResource, type=goarmy/components/spf, superType=goarmy/components/globalcomponent, path=/content/spflibrary/channel/jcr:content/spfpar/spf_4)} Using servlet /apps/goarmy/components/spf/img.jpg.java
+      6 (2013-06-25 13:21:42) TIMER_END{0,ServletResolution} URI=/content/spflibrary/channel/_jcr_content/spfpar/spf_4.img.photo1.jpg handled by Servlet=/apps/goarmy/components/spf/img.jpg.java
+      6 (2013-06-25 13:21:42) LOG Applying request filters
+      6 (2013-06-25 13:21:42) LOG Calling filter: org.apache.sling.portal.container.internal.request.PortalFilter
+      6 (2013-06-25 13:21:42) LOG Calling filter: org.apache.sling.rewriter.impl.RewriterFilter
+      6 (2013-06-25 13:21:42) LOG Calling filter: org.apache.sling.i18n.impl.I18NFilter
+      6 (2013-06-25 13:21:42) LOG Calling filter: com.day.cq.theme.impl.ThemeResolverFilter
+      6 (2013-06-25 13:21:42) LOG Calling filter: com.day.cq.wcm.foundation.forms.impl.FormsHandlingServlet
+      6 (2013-06-25 13:21:42) LOG Calling filter: com.day.cq.collab.wiki.impl.WikiServiceImpl
+      6 (2013-06-25 13:21:42) LOG Calling filter: com.day.cq.collab.wiki.impl.WikiMailServiceImpl
+      6 (2013-06-25 13:21:42) LOG Calling filter: org.apache.sling.engine.impl.debug.RequestProgressTrackerLogFilter
+      6 (2013-06-25 13:21:42) LOG Applying inner filters
+      6 (2013-06-25 13:21:42) LOG Calling filter: com.day.cq.wcm.core.impl.WCMRequestFilter
+      7 (2013-06-25 13:21:42) LOG Calling filter: com.day.cq.wcm.core.impl.WCMDebugFilter
+      7 (2013-06-25 13:21:42) TIMER_START{/apps/goarmy/components/spf/img.jpg.java#0}
+    102 (2013-06-25 13:21:42) LOG SCRIPT ERROR: javax.servlet.ServletException: (x + width) is outside raster
+    102 (2013-06-25 13:21:42) TIMER_END{95,/apps/goarmy/components/spf/img.jpg.java#0}
+    102 (2013-06-25 13:21:42) TIMER_START{handleError:throwable=javax.servlet.ServletException}
+    125 (2013-06-25 13:21:42) TIMER_END{23,handleError:throwable=javax.servlet.ServletException} Using handler Sling Default Error Handler Servlet
+    126 (2013-06-25 13:21:42) TIMER_END{126,Request Processing} Dumping SlingRequestProgressTracker Entries
+</pre>
+<hr>
+<address>ApacheSling/2.0 (Java HotSpot(TM) 64-Bit Server VM 1.6.0_43; Mac OS X 10.8.2 x86_64)</address>
+</body>
+</html>

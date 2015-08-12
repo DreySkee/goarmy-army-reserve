@@ -1,0 +1,93 @@
+<div class="section-inside">
+	<h2>Locations</h2>
+	<div class="map-wrapper">
+		<map 
+			center='{{mapInit.center}}'}}
+			zoom='{{mapInit.zoom}}'
+			scrollwheel="false"
+			pan-control="false"
+			street-view-control="false">
+			
+			<!-- http://app.mrmclient.com/tpu-2.geojson -->
+			<!-- Access Control Origin header http://army.qa.mrmclient.com/content/dam/goarmy/marquee_experience/ac2rc/data/tpu.geojson -->
+			<!--<map-data load-geo-json="http://app.mrmclient.com/tpu-2.geojson" on-click="mapClicked()"></map-data>-->
+			<map-data on-click="mapClicked()"></map-data>
+
+
+
+			<info-window id="1" position="-77.0047276,40.2101972" visible="true" disable-auto-pan="true" >
+				<div class="map-info-box" ng-non-bindable="">
+					<h3>{{selectedCategory}}</h3>
+					<p class="address">
+						{{address}}<br/>
+						{{city}}, {{state}} {{zip}}<br/>
+						1-877-780-4264<br/>
+						<a href="mailto:usarmy.knox.hrc.mbx.cmd-staff-rct-helpdesk@mail.mil" name="map">Email us</a>
+					</p>
+				</div>
+			</info-window>
+
+		</map>
+	
+		<div class="search-window">
+			<div class="career-search-box">
+
+				<h3>Opportunities Close to Home</h3>
+				<p>Find an Army Reserve location and career anywhere in the U.S.</p>
+
+				<form name="searchForm" novalidate class="simple-form" ng-submit="filter(search)">
+					<div class="form-group top">
+						<select class="jquery-selectbox ac2rc-select" name="category" ng-model="search.category" ng-options="category.name for category in careerCategories">
+						    <option value="">Select a Career Field</option>
+					    </select>
+
+					    <div class="dummie-dd">
+					    	<span>All Careers</span>
+					    	<div></div>
+					    </div>
+
+					    <div class="form-error" ng-show="categorymissing && formsubmitted">
+					    	Please select a career.
+      					</div>
+					</div>
+				    
+				    <div class="form-group">
+					    <input type="text" name="zip" ng-model="search.zip" placeholder="Enter zip code" required ng-pattern="/^(\d{5}-\d{4}|\d{5})$/" />
+					    <div class="form-error" ng-show="searchForm.zip.$error.required && formsubmitted">
+					    	Please enter a zip code.
+      					</div>
+      					<div class="form-error" ng-show="searchForm.zip.$error.pattern && formsubmitted">
+					    	Please enter a valid zip code.
+      					</div>
+      					<div class="form-error" ng-hide="hasresults">
+							No results found for your zip code and career category.
+						</div>
+					</div>
+
+					<input type="submit" class="text-button" value="SEARCH NOW" />
+
+					
+				</form>
+
+				<div class="errors">errors: 
+				{{searchForm.zip.$error}}
+				{{searchForm.zip.$dirty}}
+				{{searchForm.$valid}}
+				</div>
+			</div>
+		</div>
+
+		<div class="search-message" ng-click="openSearch()">
+			<img ng-src="{{imgpath}}/images/locations/arrow-right.png">
+			<span>Back to search</span>
+		</div>
+</div>
+<div class="mobile-cta">
+	Ready to Transition?
+	<span>Call or email us for more information</span>
+
+	<div class="links clearfix">
+		<a href="tel:+1-877-780-4264">Call Us</a>
+		<a href="mailto:usarmy.knox.hrc.mbx.cmd-staff-rct-helpdesk@mail.mil">Email Us</a>
+	</div>
+</div>

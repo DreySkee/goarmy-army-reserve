@@ -1,0 +1,230 @@
+@screen-sm: 740px;
+@screen-md: 900px;
+
+.font {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 1px;	
+}
+.font-bold {
+	font-family: 'Open Sans', sans-serif;	
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+.font-italic {
+	font-family: 'Open Sans', sans-serif;	
+	letter-spacing: 1px;
+	font-style: italic;
+}
+.font-italic-bold {;	
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 1px;
+	font-style: italic;
+}
+
+* {
+    padding:0;
+    margin:0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+    	padding: 0;
+    	margin: 0;	
+    }
+}
+
+::-webkit-scrollbar {width: 6px;}
+::-webkit-scrollbar-track {
+    background:#e7e7e7;
+    border: thin solid lightgray;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
+}
+::-webkit-scrollbar-thumb {
+    background:#b1b1b1;
+    border: thin solid #d2d2d2;
+} 
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; 
+    display: table; 
+}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+
+/* GoArmy Styles revised
+===============================================*/
+body {
+	background-image: none;
+	background-color: #fff;
+	&.no-scroll {
+		//overflow: hidden;
+		height: 400px;
+	}
+	@media (max-width: 960px) {
+		overflow-x: hidden;
+	}
+}
+#channelWrapper {
+	min-width: 100% !important;
+}
+
+#site_wrapper {
+	padding-top: 0;
+}
+#site_wrapper, #page_content {
+	width: 100% !important;
+	background: none;
+	margin-top: 0;
+}
+#main_content {
+	margin: 0;
+	background: #fff;
+}
+div#topNavigation {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	margin-left: -480px;
+	
+	@media (max-width: @screen-sm) {
+		display: none;
+	}
+}
+
+.topnav {
+	@media (max-width: @screen-sm) {
+		display: none;
+	}	
+}
+
+.footer {
+	@media (max-width: 960px) {
+		overflow: hidden;
+	}
+	@media (max-width: @screen-sm) {
+		display: none;
+	}
+}
+
+#sub_header {
+	display: none;
+}
+
+.section .section-inside ul li {
+	background: none !important;
+	border: 0;
+}
+
+/* END OF GoArmy Styles revised
+===============================================*/
+
+#ac2rc-wrap {
+	@media (max-width: @screen-sm) {
+		position: relative;
+		padding-top: 55px;
+		overflow: hidden;
+	}	
+
+	&.open-mobile-nav {
+		max-height: 600px;
+	}
+}
+
+.section-ac2rc {
+	display: block;
+	min-height: 200px;
+	box-sizing: border-box;
+	
+	@media (max-width: @screen-sm) {
+		display: none;
+		
+		&#intro {
+			display: block;
+		}
+		&#locations {
+			display: block !important;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			left: 100%;
+		}
+	}
+	@media (min-width: @screen-sm) {
+		display: block !important;
+		position: relative !important;
+		left: 0 !important;
+	}
+
+	.section-inside {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0 10px;
+	}
+
+	.mobile-cta {
+		.font-bold;
+		display: none;
+		height: 120px;
+		width: 100%;
+		background: #ffd530;
+		line-height: 40px;
+		padding-top: 8px;
+		text-align: center;
+		font-size: 20px;
+		color: #000;
+		box-sizing: border-box;
+		@media (max-width: @screen-sm) {
+			display: block;
+		}
+		
+		span {
+			display: block;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: 0;
+			font-size: 12px;
+			margin-top: -8px;
+		}
+
+		div.links {
+			width: 230px;
+			margin: 0 auto;
+			margin-top: 15px;
+			a {
+				.font-bold;
+				display: inline-block;
+				color: #000;
+				text-decoration: none;
+				width: 48%;
+				font-weight: 800;
+				letter-spacing: 0pt;
+				word-spacing: 0pt;
+				font-size: 13px;
+			   	background-color: #ffe16c;
+			   	padding: 0;
+			   	color: #000034; 
+			   	text-transform: uppercase;
+			   	height: 30px;
+			   	line-height: 28px;
+			   	text-align: center;
+			   	font-style: normal;
+			   	border: 1px solid #000;
+			   	cursor: pointer;
+			   	box-sizing: border-box;
+			   	float: left;
+			   	margin-right: 3%;
+			}	
+		}
+
+		div.links a:last-child {
+			margin-right: 0;
+		}
+		
+	}
+}

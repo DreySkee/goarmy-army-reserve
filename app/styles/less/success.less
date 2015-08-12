@@ -1,0 +1,250 @@
+#success {
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+	@media (max-width: @screen-sm) {
+		height: 580px;
+		overflow: visible;
+		margin-bottom: 120px;
+	}
+	.scalable-bg {
+		position: absolute;
+		top: 0; left: 0; right:  0; bottom: 0;
+		background: url('/images/success/1-bg.jpg') center no-repeat;
+		background-size: cover;	
+		-webkit-transform: translateZ(0);
+		&.next {
+			opacity: 0;
+		}
+	}
+	.section-inside {
+		position: relative;
+		height: 500px;
+		padding-top: 45px;
+		box-sizing: border-box;
+
+		@media (max-width: @screen-sm) {
+			height: 580px;
+			padding-top: 30px;
+		}
+
+		.mobile-avatar-wrap {
+			display: none;
+			@media (max-width: @screen-sm) {
+				position: relative;
+				display: block;
+				width: 90px;
+				height: 90px;
+				margin:  0 auto 30px;
+			}
+			.mobile-avatar {
+				display: none;
+				
+				@media (max-width: @screen-sm) {
+					position: relative;
+					display: block;
+					width: 90px;
+					height: 90px;
+					background-size: cover;
+					border-radius: 50%;
+					border: 2px solid #f9d030;;
+				}
+			}
+
+			.arrow {
+				position: absolute;
+				width: 16px;
+				height: 30px;
+				top: 30px;
+				cursor: pointer;
+				&.left {
+					display: none;
+					left: -90px;
+					background: url('/images/mobile/arrows.png') left;
+				}
+				&.right {
+					right: -90px;
+					background: url('/images/mobile/arrows.png') right;
+				}
+			}
+		}
+		.heading {
+			width: 100%;
+			margin-bottom: 30px;
+			.heading-section {
+				width: 50%;
+				float: left;
+				box-sizing: border-box;
+				padding-top: 10px;
+				position: relative;
+
+				@media (max-width: @screen-sm) {
+					//margin-bottom: 55px;
+					height: 100% !important;
+					top: 0 !important;
+				}
+
+				&.left {
+					text-align: right;
+					padding-right: 20px;
+					@media (max-width: @screen-sm) {
+						padding-right: 12px;
+					}
+				}
+				&.right {
+					text-align: left;
+					padding-left: 20px;
+					border-left: 2px solid #fff;
+					@media (max-width: @screen-sm) {
+						padding-left: 12px;
+					}
+				}
+				h2 {
+					.font;
+					font-size: 24px;
+					color: #f1ca32;
+					font-weight: 600;
+					@media (max-width: @screen-sm) {
+						font-size: 14px;
+						letter-spacing: 0;
+					}
+				}
+				h3 {
+					.font;
+					font-size: 15px;
+					color: #fff;
+					line-height: 20px;
+					margin-top: 10px;
+					font-weight: 600;
+
+					@media (max-width: @screen-sm) {
+						font-size: 12px;
+						letter-spacing: 0;
+						font-weight: 400;
+					}
+				}
+			}	
+		}
+		
+		.table {
+			display: table; 
+			height: 210px;
+		}
+		p {
+			.font-italic;
+			font-size: 22px;
+			color: #fff;
+			text-align: center;
+			line-height: 40px;
+			display: table-cell;
+			vertical-align: middle;
+
+			@media (max-width: @screen-sm) {
+				font-size: 14px;
+				line-height: 30px;
+			}
+		}
+		ul {
+			position: absolute;
+			bottom: 40px;
+			left: 50%;
+			width: 626px;
+			margin-left: -313px;
+
+			@media (max-width: @screen-sm) {
+				width: 160px;
+				margin-left: -80px;
+				bottom: 30px;
+			}
+			li {
+				float: left;
+				position: relative;
+				width: 75px;
+				height: 75px;
+				border-radius: 50%;
+				box-sizing: border-box;
+				margin-right: 35px;
+				cursor: pointer;
+				transition: .3s;
+				background-size: cover;
+
+				
+
+				@media (max-width: @screen-sm) {
+					width: 13px;
+					height: 13px;
+					background-image: none !important;
+					background-color: #fff;
+					margin-right: 16px;
+				}
+
+				img {
+					position: absolute;
+					width: 65px;
+					height: 65px;
+					top: 5px;
+					left: 5px;
+					border-radius: 50%;
+					background-size: cover;	
+					background-color: #757675;
+					border: 2px solid #757675;
+					transition: .2s;
+					box-sizing: border-box;
+					pointer-events: none;
+
+					-webkit-filter: grayscale(1);
+					-webkit-filter: grayscale(100%);
+					filter: grayscale(100%);
+					filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+					filter: gray;
+
+					&.active { // This is for IE9
+						border-color: #f9d030;
+						width: 75px;
+						height: 75px;
+						top: 0px;
+						left: 0px;
+						-webkit-filter: none;
+						filter: none;	
+					}
+
+					@media (max-width: @screen-sm) {
+						display: none;
+					}
+				}
+
+				&:hover {
+					img {
+						-webkit-filter: none;
+						filter: none;	
+					}
+					
+				}
+				&.active {
+
+					@media (max-width: @screen-sm) {
+						background-color:  #f9d030; 
+					}
+					img {
+						border-color: #f9d030;
+						width: 75px;
+						height: 75px;
+						top: 0px;
+						left: 0px;
+						-webkit-filter: none;
+						filter: none;	
+					}
+				}
+				&.disableClick {
+					pointer-events: none;
+				}
+
+				
+			}
+			li:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	
+}

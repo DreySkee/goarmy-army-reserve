@@ -1,0 +1,73 @@
+<div class="section-inside">
+
+	<div class="steps-intro">
+		<div class="steps-copy">
+			<h2>Put in the work now for a better tomorrow.</h2>
+			<p>Switching from Active Duty to the Army Reserve is a process that varies between Soldiers reaching ETS, Soldiers separating and Officers separating. This guide will help you navigate your transition.</p>
+			<h4>Choose your path and find<br> your step-by-step guide</h4>
+		</div>
+		
+		<ul class="steps-intro-nav clearfix">
+			<li ng-click="initStepNav('intro.stepNav1') | track:'ETS and Retirement'"><span>ETS &<br> Retirement</span></li>
+			<li ng-click="initStepNav('intro.stepNav2')  | track:'Enlisted Separation'"><span>Enlisted<br> Separation</span></li>
+			<li ng-click="initStepNav('intro.stepNav3') | track:'Officer Separation'"><span>Officer<br> Separation</span></li>
+		</ul>
+	</div>
+		
+	<div class="steps-wrap">
+		<div class="steps-wrap-inside" ui-view="step-nav">
+			<h3>{{stepTitle}}</h3>
+			<div class="step-nav clearfix">
+				
+				<div ng-repeat="item in stepsDataAll" class="step" ng-class="{first: $index == 0, mobMargin: $index == 3 || $index == 7, active: $index == 0}">
+					<div ng-if="$index != 0" class="line">
+						<div class="progress"></div>
+					</div>
+					<div class="radial-progress" 
+					data-index="{{$index}}" 
+					ng-class="{active: $index == 0}">
+
+					    <div class="circle">
+					        <div class="mask full">
+					            <div class="fill"></div>
+					        </div>
+					        <div class="mask half">
+					            <div class="fill"></div>
+					            <div class="fill fix"></div>
+					        </div>
+					    </div>
+				    	<div class="inset"><div class="inner-circle"></div></div>
+					</div>
+					<p ng-click="goToClickedStep($event) | track:'{{stepTitle}}_{{$index+1}}'">{{$index+1}}</p>
+
+				</div>
+				<div class="arrow left" ng-click="goToStep('prev') |  strack:this:'_arrow_left'"></div>
+				<div class="arrow right" ng-click="goToStep('next') | strack:this:'_arrow_right'"></div>
+			</div>
+
+			<div class="step-copy-inside">
+				<h4>{{stepsDataCopy.title}}</h4>
+				<p ng-bind-html="stepsDataCopy.copy | unsafe">{{stepsDataCopy.copy}}</p>
+
+				<h5 ng-hide="!stepsDataCopy.links[0].linkTitle">Learn more:</h5>
+				<ul class="links clearfix">
+					<li ng-repeat="item in stepsDataCopy.links"><a href="{{item.linkUrl}}" target="_blank" name="{{stepTitle}}">{{item.linkTitle}}</a></li>
+				</ul>
+			</div>
+
+			<div class="back-btn" ng-click="goBack() | strack:this:'_other_paths'">Other Paths</div>
+		</div>
+	</div>	
+</div>
+
+<div class="mobile-cta">
+	Ready to Transition?
+	<span>Call or email us for more information</span>
+
+	<div class="links clearfix">
+		<a href="tel:+1-877-780-4264">Call Us</a>
+		<a href="mailto:usarmy.knox.hrc.mbx.cmd-staff-rct-helpdesk@mail.mil">Email Us</a>
+	</div>
+</div>
+
+
