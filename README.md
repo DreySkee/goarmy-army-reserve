@@ -21,5 +21,7 @@ gulp serve
 
 To watch chages in LESS and JS run:
 
+
+```bash
 gulp watch
 ```
