@@ -2,6 +2,11 @@
 
 # Running the project
 
+Run npm install to install node dependencies.
+```bash
+npm install
+```
+
 You will want to run two consoles, the first builds LESS and JS, second will have the server running.
 
 ```bash
@@ -18,17 +23,3 @@ To watch chages in LESS and JS run:
 
 gulp watch
 ```
-
-
-
-# CQ integration
-
-URLs
-
-CSS - added step to gulp less task that adds ../ to paths starting with /images
-JS - added baseUrl constant service to determine a path to prepend to images and views. Should be passed into any controllers/directives that require a path to other assets (see app.js for example). 
-
-Routing 
-
-$locationProvider.html5Mode(false).hashPrefix("!");
-Main url and default url are both "" (empty string)
